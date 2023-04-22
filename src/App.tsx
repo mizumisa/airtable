@@ -1,3 +1,4 @@
+
 import { Refine } from "@pankod/refine-core";
 
 import dataProvider from "@pankod/refine-airtable";
@@ -11,6 +12,11 @@ function App() {
     <Refine
       dataProvider={dataProvider(API_TOKEN, BASE_ID)}
       routerProvider={routerProvider}
+      resources={[
+        {
+          name: "posts",
+        }
+      ]}
     />
   );
 }
